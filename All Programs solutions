@@ -1,0 +1,161 @@
+Program 1
+#include<iostream>
+using namespace std;
+class rectangle
+{
+	private:
+		int length;
+		int breadth;
+	public:
+		rectangle()
+		{
+			length=0;
+			breadth=0;
+		}
+		int getArea()
+		{
+			return length*breadth;
+		}		N
+};
+int main()
+{
+		rectangle item;
+		cout<<item.getArea();
+}
+
+Program 2:
+#include <iostream>
+#include <string>
+using namespace std;
+class IntI{
+private:
+	int i;
+public:
+	IntI(int i)
+	{
+		this->i=i;
+	}
+	void printNum()
+	{
+		cout<<"i = "<<i<<"\n";
+	}
+};
+class IntJ:public IntI
+{
+private:
+	int j;
+public:
+	IntJ(int i,int j):IntI(i)
+	{
+		this->j=j;
+	}
+	void printNum(){
+		IntI::printNum();
+		cout<<"j = "<<j<<"\n";
+	}
+};
+int main() {
+	IntJ intJ(3,3);
+	intJ.printNum();
+	system("pause");
+	return 0;
+}
+
+Program 3
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+class area
+{
+	int l,w,s;
+	public:
+
+		area(int a,int b)
+		{
+			l=a;w=b;
+			cout<<"Area of rectangle ="<<l*w<<endl;
+		}
+		area(int a)
+		{
+			s=a;
+			cout<<"Area of square="<<s*s<<endl;
+		}
+};
+
+int main()
+{
+area o1(6,12);
+area o2(6);
+}
+
+Program 4
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+class parent
+{
+
+	public:
+	int i;
+	 void printnum()
+		{
+			cout<<"the no is "<<i<<endl;
+		}
+};
+class child:public parent
+{
+
+	public:
+	int j;
+	void printnum()
+		{
+		
+			cout<<"the no is "<<j<<endl;
+		}
+};
+
+int main()
+{
+child o1;
+o1.i=10;
+o1.j=20;
+o1.printnum();
+}
+
+Program 5
+
+#include<iostream>
+#include<string.h>
+#include<string>
+
+using namespace std;
+class student
+{
+string name="unknown";
+int age=0;
+string address="not available";
+	public:
+	 void setinfo(string n,int a)
+		{
+			name=n;
+			age=a;
+			cout<<name<<"\n"<<age<<"\n"<<address<<"\n";
+		}
+void setinfo(string n,int a,string add)
+		{
+			name=n;
+			age=a;
+			address=add;
+			cout<<name<<"\n"<<age<<"\n"<<address<<"\n";
+		}
+};
+
+int main()
+{
+student o1;
+o1.setinfo("Kushagra",20);
+cout<<endl<<endl;
+o1.setinfo("Kushagra",20,"Ghaziabad");
+}
